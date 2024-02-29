@@ -7,6 +7,9 @@
 
 - 展示 `glb模型`
 - 使用 `glb文件`中的热气球动画
+- 使用`glb文件`中的汽车运动轨迹动画
+- 使用`glb文件`中的汽车相机视角
+- 不同控制器切换
 
 [Demo 展示地址](https://emiliazhen.github.io/three_smart_park/)
 
