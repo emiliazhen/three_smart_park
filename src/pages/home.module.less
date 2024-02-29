@@ -21,90 +21,6 @@ header {
   color: rgb(226, 226, 255);
   font-size: 0.4rem;
 }
-.main {
-  flex: 1;
-  width: 19.2rem;
-  display: flex;
-  justify-content: space-between;
-}
-
-.left {
-  width: 4rem;
-  background-image: url(@/assets/image/line_img.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0.4rem 0;
-}
-
-.right {
-  width: 4rem;
-  background-image: url(@/assets/image/line_img.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: left center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0.4rem 0;
-}
-.cityEvent {
-  position: relative;
-  width: 3.5rem;
-  /* height: 3rem; */
-  margin-bottom: 0.5rem;
-  background-image: url(@/assets/image/bg_img03.png);
-  background-repeat: repeat;
-}
-
-.cityEvent::before {
-  width: 0.4rem;
-  height: 0.4rem;
-  position: absolute;
-  left: 0;
-  top: 0;
-  border-top: 4px solid rgb(34, 133, 247);
-  border-left: 4px solid rgb(34, 133, 247);
-  content: '';
-  display: block;
-}
-
-.cityEvent::after {
-  width: 0.4rem;
-  height: 0.4rem;
-  position: absolute;
-  right: 0;
-  top: 0;
-  border-top: 4px solid rgb(34, 133, 247);
-  border-right: 4px solid rgb(34, 133, 247);
-  content: '';
-  display: block;
-}
-.footerBorder {
-  position: absolute;
-  bottom: 0;
-  bottom: 0;
-  width: 3.5rem;
-  height: 0.4rem;
-}
-.footerBorder::before {
-  width: 0.4rem;
-  height: 0.4rem;
-  position: absolute;
-  left: 0;
-  top: 0;
-  border-bottom: 4px solid rgb(34, 133, 247);
-  border-left: 4px solid rgb(34, 133, 247);
-  content: '';
-  display: block;
-}
-.icon {
-  width: 40px;
-  height: 40px;
-}
 
 h1 {
   color: #fff;
@@ -129,6 +45,86 @@ h1 > div {
 h1 span.time {
   font-size: 0.2rem;
   font-weight: normal;
+}
+
+.main {
+  flex: 1;
+  width: 19.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.left,
+.right {
+  width: 4rem;
+  background-image: url(@/assets/image/line_img.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.4rem 0;
+}
+.left {
+  background-position: right center;
+  h1 {
+    cursor: pointer;
+    font-size: 0.17rem;
+  }
+}
+
+.right {
+  background-position: left center;
+}
+.cityEvent {
+  position: relative;
+  width: 3.5rem;
+  /* height: 3rem; */
+  margin-bottom: 0.5rem;
+  background-image: url(@/assets/image/bg_img03.png);
+  background-repeat: repeat;
+  pointer-events: auto;
+  &::before,
+  &::after {
+    width: 0.4rem;
+    height: 0.4rem;
+    position: absolute;
+    top: 0;
+    border-top: 4px solid rgb(34, 133, 247);
+    border-left: 4px solid rgb(34, 133, 247);
+    content: '';
+    display: block;
+  }
+  &::before {
+    left: 0;
+  }
+  &::after {
+    right: 0;
+  }
+  .active {
+    color: blue;
+  }
+}
+.footerBorder {
+  position: absolute;
+  bottom: 0;
+  bottom: 0;
+  width: 3.5rem;
+  height: 0.4rem;
+}
+.footerBorder::before {
+  width: 0.4rem;
+  height: 0.4rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-bottom: 4px solid rgb(34, 133, 247);
+  border-left: 4px solid rgb(34, 133, 247);
+  content: '';
+  display: block;
+}
+.icon {
+  width: 40px;
+  height: 40px;
 }
 
 .cityEvent li > p {

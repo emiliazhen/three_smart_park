@@ -2,7 +2,7 @@
 
 ## 介绍
 
-先制作园区模型，然后制作动画，导出`glb文件`，用`three.js` 做可视化效果，做的`智慧园区Demo`，项目使用`vite + React + Typescript` 编写。  
+先制作园区模型，然后制作动画，导出`glb文件`，用`three.js` 做可视化效果，项目使用`vite + React + Typescript` 编写。  
 具体功能：
 
 - 展示 `glb模型`
